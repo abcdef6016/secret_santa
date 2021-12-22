@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+
+    <div class="flex-wrapper" class="container">
+        <div class="tag row">
+          
+    <p>
+       <button> <img src="folder.png" onclick="openfolder(this)" width="100" height="100" style="position: absolute;
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%);"/></button>
+    </p>
+</div>
+</div>
+<div id="main"  class="row draggable" style="display: none;">
+    <div  id="main21" class="container">
+      <button onclick="opendiv('main')"><p>&times;</p></button> 
+        
+            <div class="row">
+                <div class="col-sm-6">
+                    <button  style="background: transparent; border:none;" onclick="opendiv('childy')">
+                    <img src="y2.jpg"  style="width: 255px;height: 462px; position: relative;top:40px; left:5px;padding: 15px;"/>
+                    </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button style="background: transparent; border:none;" onclick="opendiv('childb')">
+                    <img src="bangchan.jpg"  style="width: 255px;height: 462px; top:40px; position: relative; padding: 15px; "/>
+                    </button>
+                    </div>
+            </div>
+            </div>  
+        </div>
+        <div id="childy"  style="display: none;">
+          <div class="container cont">
+  <div class="main2 row">
+      <button onclick="opendiv('childy')"><p>&times;</p></button>
+    <div class="row">
+        <div class="col-sm-3">
+            <button> <img src="folder.png" onclick="opendiv('mvy')" width="100" height="100"/><p><b>Era look</b></p></button>
+        </div>
+        <div class="col-sm-3">
+            <button> <img src="folder.png" onclick="opendiv('emojiy')" width="100" height="100"/><p><b>Emoji yugyeom</b></p></button>
+        </div>
+        <div class="col-sm-3">
+            <button> <img src="folder.png" onclick="opendiv('colory')" width="100" height="100"/><p><b>colors</b></p></button>
+        </div>
+    </div>
+    </div>
+
+</div>
+</div>
+<div id="childb" class="draggable" style="display: none;">
+    <div class="container cont">
+        <div class="main2 row">
+          <button onclick="opendiv('childb')"><p>&times;</p></button>
+        <div class="row">
+            <div class="col-sm-3">
+                <button> <img src="folder.png" onclick="opendiv('mvb')" width="100" height="100" /><p><b>Era look</b></p></button>
+            </div>
+            <div class="col-sm-3">
+                <button> <img src="folder.png" onclick="opendiv('colorb')" width="100" height="100"/><p><b>Colors</b></p></button>
+            </div>
+            <div class="col-sm-3">
+                <button> <img src="folder.png" onclick="opendiv('fancamb')" width="100" height="100"/><p><b>Fancam</b></p></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div id="mvy" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('mvy')"><p><b>&times;</b></p></button> 
+        <b>Era looks of yugyeoms</b>
+      <div class="container" style="position: relative;padding: 10px;">
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal');currentSlide(1)" src="yugyeom/got.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(2)"src="yugyeom/got2.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(3)"src="yugyeom/identify.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(4)"src="yugyeom/just_right.jpg"/>
+            </div>
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal');currentSlide(5)" src="yugyeom/7_for_7.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(6)" src="yugyeom/eyes_on_u.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(7)" src="yugyeom/new_era.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(8)" src="yugyeom/let_you_go.jpg"/>
+            </div>
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal');currentSlide(9)" src="yugyeom/call_my_name.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(10)" src="yugyeom/lullaby.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(11)" src="yugyeom/last_breath.jpg"/>
+                <img class="imgg" onclick="openModal('myModal');currentSlide(12)" src="yugyeom/all_your_fault.jpg"/>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 12</div>
+            <img class="imgmodel" src="yugyeom/got.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 12</div>
+          <img class="imgmodel" src="yugyeom/got2.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 12</div>
+          <img class="imgmodel" src="yugyeom/identify.jpg"/>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 12</div>
+          <img class="imgmodel" src="yugyeom/just_right.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 12</div>
+          <img class="imgmodel" src="yugyeom/7_for_7.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 12</div>
+          <img class="imgmodel" src="yugyeom/eyes_on_u.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 12</div>
+          <img class="imgmodel" src="yugyeom/new_era.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">8 / 12</div>
+          <img class="imgmodel" src="yugyeom/let_you_go.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">9 / 12</div>
+          <img class="imgmodel" src="yugyeom/call_my_name.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">10 / 12</div>
+          <img class="imgmodel" src="yugyeom/lullaby.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">11 / 12</div>
+          <img class="imgmodel" src="yugyeom/last_breath.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">12 / 12</div>
+          <img class="imgmodel" src="yugyeom/all_your_fault.jpg"/>
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+    <div id="emojiy" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('emojiy')"><p>&times;</p></button> 
+        <b>yugyeom emoji</b>
+      <div class="container" style="position: relative;padding: 10px;">
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal1');currentSlide(13)" src="yugyeom/shock.jpg"/>
+                <img class="imgg" onclick="openModal('myModal1');currentSlide(14)" src="yugyeom/oops.jpg"/>
+                <img class="imgg" onclick="openModal('myModal1');currentSlide(15)" src="yugyeom/angry.png"/>
+                <img class="imgg" onclick="openModal('myModal1');currentSlide(16)" src="yugyeom/laugh.jpg"/>
+            </div>
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal1');currentSlide(17)" src="yugyeom/pout.png">
+          
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal1" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal1')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 5</div>
+            <img class="imgmodel" src="yugyeom/shock.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 5</div>
+          <img class="imgmodel" src="yugyeom/oops.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 5</div>
+          <img class="imgmodel" src="yugyeom/angry.png"/>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 5</div>
+          <img class="imgmodel" src="yugyeom/laugh.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 5</div>
+          <img class="imgmodel" src="yugyeom/pout.png"/>
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+    
+    
+      </div>
+    </div>
+    <div id="colory" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('colory')"><p>&times;</p></button>
+        <b>yugyeom in colors</b> 
+      <div class="container" style="position: relative;padding: 10px;">
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(18)" src="yugyeom/violet.jpg"/>
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(19)" src="yugyeom/royal_blue.jpg"/>
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(20)" src="yugyeom/green.jpg"/>
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(21)" src="yugyeom/yellow.jpg"/>
+            </div>
+            <div class="col">
+              <img class="imgg" onclick="openModal('myModal2');currentSlide(22)" src="yugyeom/red.jpg"/>
+              <img class="imgg" onclick="openModal('myModal2');currentSlide(23)" src="yugyeom/black.png"/>
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(24)" src="yugyeom/white.jpg"/>
+                <img class="imgg" onclick="openModal('myModal2');currentSlide(25)" src="yugyeom/pink.png">
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal2" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal2')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 8</div>
+            <img class="imgmodel" src="yugyeom/violet.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 8</div>
+          <img class="imgmodel" src="yugyeom/royal_blue.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 8</div>
+          <img class="imgmodel" src="yugyeom/green.jpg"/>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 8</div>
+          <img class="imgmodel" src="yugyeom/yellow.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 8</div>
+          <img class="imgmodel" src="yugyeom/black.png"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 8</div>
+          <img class="imgmodel" src="yugyeom/red.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 8</div>
+          <img class="imgmodel" src="yugyeom/white.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">8 / 8</div>
+          <img class="imgmodel" src="yugyeom/pink.jpg"/>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+    <div id="mvb" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('mvb')"><p>&times;</p></button> 
+        <b>Era looks Bang chan</b>
+      <div class="container" style="position: relative;padding: 10px;">
+          
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal3');currentSlide(26)" src="bangchan/hellevator.jpg"/>
+                <img class="imgg" onclick="openModal('myModal3');currentSlide(27)" src="bangchan/i_am_not.jpg"/>
+                <img class="imgg" onclick="openModal('myModal3');currentSlide(28)" src="bangchan/i_am_who.jpg"/>
+                <img class="imgg" onclick="openModal('myModal3');currentSlide(29)" src="bangchan/i_am_you.jpg"/>
+              </div>
+              <div class="col">
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(30)" src="bangchan/miroh.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(31)" src="bangchan/yellow_wood.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(32)" src="bangchan/double_knot.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(33)" src="bangchan/gone_dayd.jpg"/>
+              </div>
+              <div class="col">
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(34)" src="bangchan/on_track.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(35)" src="bangchan/top.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(36)" src="bangchan/go.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(37)" src="bangchan/in_life.jpg"/>
+        </div>
+            <div class="col">
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(38)" src="bangchan/no_easy.jpg"/>
+              <img class="imgg" onclick="openModal('myModal3');currentSlide(39)" src="bangchan/eve.jpg"/>
+              
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal3" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal3')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 14</div>
+            <img class="imgmodel" src="bangchan/hellevator.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 14</div>
+          <img class="imgmodel" src="bangchan/i_am_not.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 14</div>
+          <img class="imgmodel" src="bangchan/i_am_who.jpg"/>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 14</div>
+          <img class="imgmodel" src="bangchan/i_am_you.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 14</div>
+          <img class="imgmodel" src="bangchan/miroh.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 14</div>
+          <img class="imgmodel" src="bangchan/yellow_wood.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 14</div>
+          <img class="imgmodel" src="bangchan/double_knot.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">8 / 14</div>
+          <img class="imgmodel" src="bangchan/gone_dayd.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">9 / 14</div>
+          <img class="imgmodel" src="bangchan/on_track.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">10 / 14</div>
+          <img class="imgmodel" src="bangchan/top.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">11 / 14</div>
+          <img class="imgmodel" src="bangchan/go.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">12 / 14</div>
+          <img class="imgmodel" src="bangchan/in_life.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">13 / 14</div>
+          <img class="imgmodel" src="bangchan/no_easy.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">14 / 14</div>
+          <img class="imgmodel" src="bangchan/eve.jpg"/>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+    <div id="colorb" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('colorb')"><p>&times;</p></button> 
+        <b>Bang chan in different colors</b>
+      <div class="container" style="position: relative;padding: 10px;">
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal4');currentSlide(40)" src="bangchan/violet.jpg"/>
+                <img class="imgg" onclick="openModal('myModal4');currentSlide(41)" src="bangchan/blue.jpg"/>
+                <img class="imgg" onclick="openModal('myModal4');currentSlide(42)" src="bangchan/green.jpg"/>
+                <img class="imgg" onclick="openModal('myModal4');currentSlide(43)" src="bangchan/yellow.jpg"/>
+              </div>
+              <div class="col">
+              <img class="imgg" onclick="openModal('myModal4');currentSlide(44)" src="bangchan/red.jpg"/>
+              <img class="imgg" onclick="openModal('myModal4');currentSlide(45)" src="bangchan/white.jpg"/>
+              <img class="imgg" onclick="openModal('myModal4');currentSlide(46)" src="bangchan/pinl.jpg"/>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal4" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal4')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 7</div>
+            <img class="imgmodel" src="bangchan/violet.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 7</div>
+          <img class="imgmodel" src="bangchan/blue.jpg"/>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 7</div>
+          <img class="imgmodel" src="bangchan/green.jpg"/>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 7</div>
+          <img class="imgmodel" src="bangchan/yellow.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 7</div>
+          <img class="imgmodel" src="bangchan/red.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 7</div>
+          <img class="imgmodel" src="bangchan/white.jpg"/>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 7</div>
+          <img class="imgmodel" src="bangchan/pinl.jpg"/>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+    <div id="fancamb" class="container cont" style="display: none;">
+      <div class="main2 row">
+        <button onclick="opendiv('fancamb')"><p>&times;</p></button> 
+        <b>Fancams of bangchan</b>
+      <div class="container" style="position: relative;padding: 10px;">
+        <div class="row" style="position:relative;padding-left: 40px">
+            <div class="col">
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(47)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(48)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(49)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(50)" src="video.png"/>
+              </div>
+              <div class="col">
+              <img class="imgg" onclick="openModal('myModal5');currentSlide(51)" src="video.png"/>
+              <img class="imgg" onclick="openModal('myModal5');currentSlide(52)" src="video.png"/>
+              <img class="imgg" onclick="openModal('myModal5');currentSlide(53)" src="video.png"/>
+              <img class="imgg" onclick="openModal('myModal5');currentSlide(54)" src="video.png"/>
+              </div>
+              <div class="col">
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(55)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(56)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(57)" src="video.png"/>
+                <img class="imgg" onclick="openModal('myModal5');currentSlide(58)" src="video.png"/>
+                </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal5" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal5')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lADRZ0oRdw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JyIFSeps1XE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/MpN8h3vgKkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VuTMZPfLGvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">5 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xQ4Om8A1OTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">6 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YMOt2DudxfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">7 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/neDiWvtmxdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">8 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_314ulZqC0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">9 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/v4ZOmw9l2I4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">10 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/P2nZCdqq6LE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">11 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ODs2sq7cINI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">12 / 12</div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FwDRawVFZ6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+<script>
+    function openfolder(btnPassport)
+    {
+        var dvPassport = document.getElementById("main");
+        if (btnPassport.value == "Yes") {
+            dvPassport.style.display = "block";
+            btnPassport.value = "No";
+        } else {
+            dvPassport.style.display = "none";
+            btnPassport.value = "Yes";
+        }
+    }
+function opendiv(div)
+{
+  var main=document.getElementById(div);
+  if(main.style.display=="block")
+  {
+    main.style.display="none";
+  }
+  else
+  {
+    main.style.display="block";
+  }
+}
+
+function openModal(model) {
+  document.getElementById(model).style.display = "block";
+}
+
+function closeModal(model) {
+  document.getElementById(model).style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  if((slideIndex==12)&&(n==1))
+  {
+    slideIndex=0;
+  }
+  if((slideIndex==1)&&(n==-1))
+  {
+    slideIndex=13;
+  }
+  if((slideIndex==13)&&(n==-1))
+  {
+    slideIndex=18;
+  }
+  if((slideIndex==17)&&(n==1))
+  {
+    slideIndex=12;
+  }
+  if((slideIndex==18)&&(n==-1))
+  {
+    slideIndex=26;
+  }
+  if((slideIndex==25)&&(n==1))
+  {
+    slideIndex=17;
+  }
+  if((slideIndex==39)&&(n==1))
+  {
+    slideIndex=25;
+  }
+  if((slideIndex==26)&&(n==-1))
+  {
+    slideIndex=40;
+  }
+  if((slideIndex==46)&&(n==1))
+  {
+    slideIndex=39;
+  }
+  if((slideIndex==40)&&(n==-1))
+  {
+    slideIndex=47;
+  }
+  if((slideIndex==58)&&(n==1))
+  {
+    slideIndex=46;
+  }
+  if((slideIndex==47)&&(n==-1))
+  {
+    slideIndex=59;
+  }
+  
+  
+  showSlides(slideIndex += n);
+  
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+ 
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  
+}
+</script>
+</body>
+</html>
